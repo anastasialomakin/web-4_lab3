@@ -51,7 +51,6 @@
     </nav>
 
     <div class="container">
-        {# Отображение flash-сообщений #}
         <div class="flash-messages">
             {% with messages = get_flashed_messages(with_categories=true) %}
                 {% if messages %}
@@ -65,7 +64,6 @@
             {% endwith %}
         </div>
 
-        {# Основной контент страницы #}
         {% block content %}
         {% endblock %}
     </div>

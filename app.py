@@ -15,9 +15,9 @@ login_manager.login_message = "Для доступа к этой страниц�
 login_manager.login_message_category = "info"
 
 users_db = {
-    "user": {
-        "password": "qwerty",
-        "id": "user"
+    "admin": {
+        "password": "12345",
+        "id": "admin"
     }
 }
 
@@ -32,7 +32,7 @@ def load_user(user_id):
     return None
 
 class LoginForm(FlaskForm):
-    username = StringField('Логин', validators=[DataRequired(message="Логин не может быть пустым")])
+    username = StringField('Логин', validators=[DataRequired(message="Поле не может быть пустым")])
     password = PasswordField('Пароль', validators=[DataRequired(message="Пароль не может быть пустым")])
     remember_me = BooleanField('Запомнить меня')
     submit = SubmitField('Войти')
