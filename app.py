@@ -7,6 +7,7 @@ from wtforms.validators import DataRequired
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your_very_secret_key_replace_in_production')
+application = app
 
 login_manager = LoginManager()
 login_manager.init_app(app)
